@@ -21,6 +21,13 @@ button:hover{
     opacity: 0.8;
     transition: 0.3s ease-in-out;
 }
+ul{
+    list-style-type: none;
+}
+ul li{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
 /* reset code ends here */
 /* navigation starts here */
 nav{
@@ -30,6 +37,7 @@ nav{
     margin-bottom: 32px;
     background: white;
     padding: 10px;
+    z-index: 50;
 }
 .navigation{
     display: flex;
@@ -73,3 +81,117 @@ nav{
     align-self: flex-start;
 }
 /* hero section ends here */
+/* responsiveness starts here */
+@media (max-width: 786px){
+    .hero{
+        flex-direction: column;
+    }
+    .hero__img{
+        display: flex;
+        justify-content: center;
+    }
+    .hero__img img{
+        width: 80%;
+    }
+    .hero__content{
+        gap: 10px;
+        padding: 10px;
+    }
+    .hero__content h1{
+        font-size: 32px;
+    }
+    .features{
+        flex-direction: column;
+    }
+    .footer__container{
+        flex-direction: column;
+    }
+}
+/* responsiveness ends here */
+/* feature starts here */
+.features{
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.feature{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.feature:hover{
+    transition: all 0.2s ease-in-out;
+    box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.05);
+
+}
+.divider{
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+/* feature ends here */
+/* menu starts here */
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.menu .tag{
+    align-self: center;
+}
+.grid__img{
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+.grid__img:hover{
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+.grid{
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+     "I1 I1 I2 I3"
+     "I1 I1 I2 I7"
+     "I4 I5 I6 I7";
+}
+.item1{
+
+  grid-area: I1;
+}
+.item2{
+    grid-area: I2;
+}
+.item3{
+    grid-area: I3;
+}
+.item4{
+    grid-area: I4;
+}
+.item5{
+    grid-area: I5;
+}
+.item6{
+    grid-area: I6;
+}
+.item7{
+    grid-area: I7;
+}
+/* menu ends here */
+/* footer starts here */
+footer{
+  background-color: #fff0db;
+}
+.footer__container{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+/* footer ends here */
